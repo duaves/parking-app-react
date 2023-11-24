@@ -1,4 +1,5 @@
-import { Outlet, NavLink } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import NamedLink from '@/components/NamedLink'
  
 function App() {
   return (
@@ -15,14 +16,14 @@ function App() {
                 </div>
                 myParking
               </h2>
-              <NavLink end to="/" className={ ({isActive}) => {
-                return isActive ? 'text-blue-600 underline' : 'text-blue-600'
-              } }>Домашняя</NavLink>
+              <NamedLink name="home">
+                Домашняя
+              </NamedLink>
             </div>
             <div className="flex gap-4 items-center">
-              <NavLink end to="/register" className={ ({isActive}) => {
-                return isActive ? 'text-blue-600 underline' : 'text-blue-600'
-              } }>Регистрация</NavLink>
+              <NamedLink name="register">
+                Регистрация
+              </NamedLink>
             </div>
           </nav>
         </div>
